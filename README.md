@@ -1,20 +1,4 @@
-# Assignment: Don't Be Sentimental!
-
-**Objective:** 
-
-* Practice the use of git and GitHub.
-* Implement a class (DSString) that uses dynamic memory allocation and requires the implementation of the rule-of-three.
-* Practice debugging and memory leak detection.
-* Use of STL container (vectors, maps, etc.)
-* Analyze the runtime complexity.
-* Write a program with a command line interface.
-* Design, implement, and test a small system.
-
-## Time Line 
-You have about four weeks to complete the assignment. **Start right away!** 
-
-**The lab TA will expect that you already have most of that week's work completed. Come with prepared questions and
-be prepared to answer the TA's questions about your code. You may leave the lab early if you can show the TA that you have finished the work stated below.**
+# Sentiment Analysis
 
 * Week 1: Implement the DSString class so you are able to perform basic string operations. 
   Test with `valgrind` or `asan` to make sure you do not have memory leaks. **Deliverables: DSString class + tests.**
@@ -23,15 +7,13 @@ be prepared to answer the TA's questions about your code. You may leave the lab 
 * Week 4: Finish and clean up your code. Improve comments in code. Answering the questions in the Answers section of this document. **Deliverable: Completed `Answers.md` and assignment submission.**
 
 ## Introduction
-Have you ever read a tweet and thought, “Gee, what a positive outlook!” or “Wow, why so negative, friend?”  Can computers make the same determination?  They can surely try!
 
 In Machine Learning, the task of assigning a **label** to a data item is called **classification** (putting things into different classes or categories).  The more specific name for what we’re going to do is sentiment analysis because you’re trying to determine the “sentiment” or attitude based on the words in a tweet.  The goal of the project is to build a sentiment classifier! Aren’t you excited??  ( ← That would be positive sentiment!)
 
 You’ll be given a set of tweets called the **training data set** that are already pre-classified by humans as **positive** or **negative** based on their content.  You’ll analyze the frequency of occurrences of words in the tweets to develop a classification scheme.  Using your classification scheme, you’ll then classify another set of tweets called the **testing data set** and **predict** if each tweet has positive sentiment or negative sentiment.
 
 The goal of this assignment is to get familiar with how dynamic memory allocation works in vectors and strings operate.
-While there are many other data structures besides vectors, which
-would allow us to implement a more efficient solution, we will **stick with vectors for now.** If you want to implement a more efficient version in addition, then you can do so (modify `CMakeLists.txt` to create two executables) and compare the runtime in your description.
+While there are many other data structures besides vectors, which would allow us to implement a more efficient solution, we will **stick with vectors for now.** If you want to implement a more efficient version in addition, then you can do so (modify `CMakeLists.txt` to create two executables) and compare the runtime in your description.
 
 
 ## Building a Classifier
@@ -121,12 +103,6 @@ Example of the testing data tweet classifications file:
 
 
 ## Implementation Requirements
-
-**Important: Read this before you start!!**
-
-### Using GitHub
-
-To use GitHub appropriately, you need to submit regularly new additions to your code and push them to the repository. This is important so you always have a safe backup and we can follow your development process. **Do not just upload your completed project to GitHub at the end or perform a single commit.**
 
 ### Program Structure
 Create a UML diagram. Remember that when you read the problem description then nouns are class candidates and verbs are candidates for member functions. You probably need a SentimentClassifier class. Clearly separate training from testing in your code. You should implement your classifier model in a class and your main function could look like this pseudo code:
